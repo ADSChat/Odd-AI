@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Chat with Bob</title>
-    <style>
+    <!--<style>
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -55,7 +56,7 @@
         #sendBtn:hover:not(:disabled) {
             background: #005bb5;
         }
-    </style>
+    </style>-->
 </head>
 <body>
     <div id="chatbox">
@@ -76,20 +77,20 @@
 
             if (!userInput.value.trim()) return;
 
-            // Add user message to chat
+            // Send user message to chat
             addMessageToChat('You', userInput.value);
 
             // Disable input and button, show loading
             userInput.disabled = true;
             sendBtn.disabled = true;
-            sendBtn.textContent = "⏳ Thinking...";
+            sendBtn.textContent = "Bob is Thinking...";
 
-            // Generate Bob's response
+            // Response from Bob
             try {
                 let bobResponse = await generateBobResponse(userInput.value);
                 addMessageToChat('Bob', bobResponse);
             } catch (error) {
-                addMessageToChat('Error', 'Failed to get a response from the AI.');
+                addMessageToChat('Error', 'Failed to get a response from Bob.');
                 console.error('Error fetching response:', error);
             }
 
@@ -113,12 +114,12 @@
             chatHistoryCtn.scrollTop = chatHistoryCtn.scrollHeight;
         }
 
-        // Allow sending message with Enter key
+        // Send message with Enter
         document.getElementById('userInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') sendMessage();
         });
 
-        // AI model for generating Bob's responses using Hugging Face API
+        // Hugging Face API
         async function generateBobResponse(userMessage) {
             const apiKey = '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';
             const model = 'gpt2';
