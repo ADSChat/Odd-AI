@@ -12,4 +12,4 @@ At times, it almost seems that he just scrapes answers off the internet and resp
 - [ ] Research Bob's strange responses.
 - [ ] Personal deployment to Github pages
 
-### DISCLAIMER: HENRYWAUZVIUFF (and QuizzityMC) ARE NOT RESPONSIBLE FOR ANY RESPONSES FROM BOB THAT MAY CONTAIN REFERENCES TO QUESTIONABLE ACTIVITIES.
+### DISCLAIMER: WE ARE NOT RESPONSIBLE FOR ANY RESPONSES FROM BOB THAT MAY CONTAIN REFERENCES TO QUESTIONABLE ACTIVITIES.
